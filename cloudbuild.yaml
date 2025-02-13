@@ -18,9 +18,9 @@ steps:
       [
         "build",
         "-t",
-        "$LOCATION-docker.pkg.dev/$PROJECT_ID/mwa-docker-registry/app:$SHORT_SHA",
+        "europe-west4-docker.pkg.dev/mwa-infrastructure-as-code/mwa-docker-registry/app:$SHORT_SHA",
         "-t",
-        "$LOCATION-docker.pkg.dev/$PROJECT_ID/mwa-docker-registry/app:latest",
+        "europe-west4-docker.pkg.dev/mwa-infrastructure-as-code/mwa-docker-registry/app:latest",
         ".",
       ]
   - name: "gcr.io/cloud-builders/docker:24.0.9"
@@ -32,7 +32,7 @@ steps:
       ]
 
 images:
-  - "$LOCATION-docker.pkg.dev/$PROJECT_ID/mwa-docker-registry/app"
+  - "europe-west4-docker.pkg.dev/mwa-infrastructure-as-code/mwa-docker-registry/app"
 
 options:
   logging: CLOUD_LOGGING_ONLY
