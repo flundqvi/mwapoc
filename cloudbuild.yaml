@@ -27,7 +27,7 @@ steps:
     args:
       [
         "push",
-        "$LOCATION-docker.pkg.dev/$PROJECT_ID/mwa-docker-registry/app",
+        "europe-west4-docker.pkg.dev/mwa-infrastructure-as-code/mwa-docker-registry/app",
         "--all-tags",
       ]
 
