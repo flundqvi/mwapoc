@@ -18,21 +18,21 @@ steps:
       [
         "build",
         "-t",
-        "$LOCATION-docker.pkg.dev/$PROJECT_ID/react-app/app:$SHORT_SHA",
+        "$LOCATION-docker.pkg.dev/$PROJECT_ID/mwa-docker-registry/app:$SHORT_SHA",
         "-t",
-        "$LOCATION-docker.pkg.dev/$PROJECT_ID/react-app/app:latest",
+        "$LOCATION-docker.pkg.dev/$PROJECT_ID/mwa-docker-registry/app:latest",
         ".",
       ]
   - name: "gcr.io/cloud-builders/docker:24.0.9"
     args:
       [
         "push",
-        "$LOCATION-docker.pkg.dev/$PROJECT_ID/react-app/app",
+        "$LOCATION-docker.pkg.dev/$PROJECT_ID/mwa-docker-registry/app",
         "--all-tags",
       ]
 
 images:
-  - "$LOCATION-docker.pkg.dev/$PROJECT_ID/react-app/app"
+  - "$LOCATION-docker.pkg.dev/$PROJECT_ID/mwa-docker-registry/app"
 
 options:
   logging: CLOUD_LOGGING_ONLY
